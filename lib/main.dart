@@ -1,6 +1,6 @@
-import 'package:fake_bank/routing/route_names.dart';
-import 'package:fake_bank/routing/router.dart';
-import 'package:fake_bank/themes/nubank_theme.dart';
+import 'package:fake_bank/core/routing/router.dart';
+import 'package:fake_bank/ui/nubank/routes/routes_names.dart';
+import 'package:fake_bank/ui/nubank/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,9 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fake Bank',
-      theme: nubankTheme,
       onGenerateRoute: generateRoute,
       initialRoute: nubankLoginRoute,
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        primaryColorDark: kPrimaryColorDark,
+        fontFamily: 'Graphik',
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
-import 'package:fake_bank/components/app_container.dart';
-import 'package:fake_bank/routing/route_names.dart';
+import 'package:fake_bank/core/components/app_container.dart';
+import 'package:fake_bank/ui/nubank/routes/routes_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

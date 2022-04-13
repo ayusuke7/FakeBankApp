@@ -13,6 +13,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.3
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_test:
@@ -40,23 +41,25 @@ flutter:
   # 800 - Extra Bold, Ultra Bold.
 
   fonts:
+    - family: NuIcons
+      fonts:
+        - asset: assets/fonts/nubank/NuIcons/NuIcons.ttf
+
     - family: Graphik
       fonts:
-        - asset: assets/fonts/nubank/GraphikBlack.otf
-          weight: 800
-        - asset: assets/fonts/nubank/GraphikBold.otf
-          weight: 700
-        - asset: assets/fonts/nubank/GraphikExtralight.otf
-          weight: 200
-        - asset: assets/fonts/nubank/GraphikLight.otf
-          weight: 300
-        - asset: assets/fonts/nubank/GraphikMedium.otf
-          weight: 500
-        - asset: assets/fonts/nubank/GraphikRegular.otf
-          weight: 400
-        - asset: assets/fonts/nubank/GraphikSemibold.otf
-          weight: 600
-        - asset: assets/fonts/nubank/GraphikThin.otf
+        - asset: assets/fonts/nubank/Graphik/GraphikThin.otf
           weight: 100
-        # - asset: assets/fonts/GraphikSuper.otf
-        #   weight: 100
+        - asset: assets/fonts/nubank/Graphik/GraphikExtralight.otf
+          weight: 200
+        - asset: assets/fonts/nubank/Graphik/GraphikLight.otf
+          weight: 300
+        - asset: assets/fonts/nubank/Graphik/GraphikRegular.otf
+          weight: 400
+        - asset: assets/fonts/nubank/Graphik/GraphikMedium.otf
+          weight: 500
+        - asset: assets/fonts/nubank/Graphik/GraphikSemibold.otf
+          weight: 600
+        - asset: assets/fonts/nubank/Graphik/GraphikBold.otf
+          weight: 700
+        - asset: assets/fonts/nubank/Graphik/GraphikBlack.otf
+          weight: 800

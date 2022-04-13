@@ -1,16 +1,9 @@
-import 'package:fake_bank/pages/nubank/home_page.dart';
-import 'package:fake_bank/pages/nubank/login_page.dart';
-import 'package:fake_bank/routing/route_names.dart';
+import 'package:fake_bank/ui/nubank/routes/routes_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-Map<String, Widget> routesMap = {
-  nubankLoginRoute: const NubankLoginPage(),
-  nubankHomeRoute: const NubankHomePage(),
-};
-
 Route<dynamic> generateRoute(RouteSettings settings) {
-  Widget child = routesMap[settings.name] ?? Container();
+  Widget child = nubankRoutes[settings.name] ?? Container();
   return _getPageRoute(child, settings);
 }
 
