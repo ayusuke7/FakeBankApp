@@ -1,8 +1,9 @@
 import 'package:fake_bank/core/components/app_container.dart';
-import 'package:fake_bank/ui/nubank/components/card_details.dart';
-import 'package:fake_bank/ui/nubank/components/circle_button.dart';
-import 'package:fake_bank/ui/nubank/theme/colors.dart';
-import 'package:fake_bank/ui/nubank/theme/icons.dart';
+import 'package:fake_bank/modules/nubank/components/nu_card_details.dart';
+import 'package:fake_bank/modules/nubank/components/nu_circle_button.dart';
+import 'package:fake_bank/modules/nubank/constants/nu_assets.dart';
+import 'package:fake_bank/modules/nubank/theme/nu_colors.dart';
+import 'package:fake_bank/modules/nubank/theme/nu_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -92,7 +93,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: const [
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         Icons.pix_outlined,
                         size: 24.0, 
@@ -100,7 +101,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Área Pix",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         NuIcons.ic_savings_global_action_pay,
                         size: 24.0, 
@@ -108,7 +109,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Pagar",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         NuIcons.ic_savings_global_action_transfer_out,
                         size: 24.0, 
@@ -116,7 +117,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Transferir",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         NuIcons.ic_savings_global_action_transfer_in,
                         size: 24.0, 
@@ -124,7 +125,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Depositar",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                          NuIcons.nuds_ic_personal_loan,
                         size: 24.0, 
@@ -132,7 +133,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Empréstimos",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         NuIcons.ic_phone,
                         size: 24.0, 
@@ -140,7 +141,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       ),
                       text: "Recarga de celular",
                     ),
-                    CircleButton(
+                    NuCircleButton(
                       child: Icon(
                         NuIcons.nuds_ic_request_money,
                         size: 24.0, 
@@ -156,14 +157,14 @@ class _NubankHomePageState extends State<NubankHomePage> {
               padding: const EdgeInsets.fromLTRB(25, 5, 25, 10),
               child: TextButton.icon(
                 style: TextButton.styleFrom(
-                  backgroundColor: kBgButtonColor,
+                  backgroundColor: NuColors.kBgButtonColor,
                   alignment: Alignment.centerLeft,
                   padding: const EdgeInsets.all(14.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)
                   )
                 ),
-                icon: SvgPicture.asset('assets/icons/nubank/mobile.svg'), 
+                icon: SvgPicture.asset(NuAssets.mobile), 
                 label: const Text('  Meus cartões', style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w600
@@ -183,7 +184,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(14.0),
                       decoration: BoxDecoration(
-                        color: kBgButtonColor,
+                        color: NuColors.kBgButtonColor,
                         borderRadius: BorderRadius.circular(10)
                       ),
                       child: RichText(
@@ -200,7 +201,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                             TextSpan(
                               text: 'R\$ 25.000,00 ',
                               style: TextStyle(
-                                color: kPrimaryColor,
+                                color: NuColors.kPrimaryColor,
                                 fontWeight: FontWeight.w600
                               )
                             ),
@@ -218,7 +219,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(14.0),
                       decoration: BoxDecoration(
-                        color: kBgButtonColor,
+                        color: NuColors.kBgButtonColor,
                         borderRadius: BorderRadius.circular(10)
                       ),
                       child: RichText(
@@ -235,7 +236,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                             TextSpan(
                               text: 'Convide seus amigos',
                               style: TextStyle(
-                                color: kPrimaryColor,
+                                color: NuColors.kPrimaryColor,
                                 fontWeight: FontWeight.w600
                               )
                             ),
@@ -254,9 +255,9 @@ class _NubankHomePageState extends State<NubankHomePage> {
             Container(
               padding: const EdgeInsets.only(left: 25.0),
               alignment: Alignment.centerLeft,
-              child: SvgPicture.asset('assets/icons/nubank/mobile.svg')
+              child: SvgPicture.asset(NuAssets.mobile)
             ),
-            CardDetails(
+            NuCardDetails(
               padding: const EdgeInsets.fromLTRB(25, 20, 25, 10),
               trailing: const Icon(Icons.navigate_next, size: 28.0),
               children: [
@@ -281,7 +282,7 @@ class _NubankHomePageState extends State<NubankHomePage> {
                 const SizedBox(height: 20),
                 TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: kBgButtonColor,
+                    backgroundColor: NuColors.kBgButtonColor,
                     padding: const EdgeInsets.fromLTRB(20, 7, 20, 7),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)
@@ -303,9 +304,9 @@ class _NubankHomePageState extends State<NubankHomePage> {
             Container(
               padding: const EdgeInsets.only(left: 25.0),
               alignment: Alignment.centerLeft,
-              child: SvgPicture.asset('assets/icons/nubank/mobile.svg')
+              child: SvgPicture.asset(NuAssets.mobile)
             ),
-            const CardDetails(
+            const NuCardDetails(
               padding: EdgeInsets.fromLTRB(25, 20, 25, 10),
               trailing: Icon(Icons.navigate_next, size: 28.0),
               children: [

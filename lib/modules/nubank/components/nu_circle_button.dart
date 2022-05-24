@@ -1,7 +1,7 @@
-import 'package:fake_bank/ui/nubank/theme/colors.dart';
+import 'package:fake_bank/modules/nubank/theme/nu_colors.dart';
 import 'package:flutter/material.dart';
 
-class CircleButton extends StatelessWidget {
+class NuCircleButton extends StatelessWidget {
 
   final Widget child;
   final String? text;
@@ -10,13 +10,13 @@ class CircleButton extends StatelessWidget {
   final EdgeInsets? margin;
   final VoidCallback? onTap;
 
-  const CircleButton({ 
+  const NuCircleButton({ 
     Key? key,
     required this.child,
     this.text,
     this.onTap,
+    this.backgroundColor,
     this.margin = const EdgeInsets.all(5.0),
-    this.backgroundColor = kBgButtonColor,
     this.textStyle = const TextStyle(fontWeight: FontWeight.w600),
   }) : super(key: key);
 
@@ -35,7 +35,7 @@ class CircleButton extends StatelessWidget {
             CircleAvatar(
               child: child,
               radius: 35.0,
-              backgroundColor: backgroundColor,
+              backgroundColor: backgroundColor ?? NuColors.kBgButtonColor,
             ),
             if(text != null)
               const SizedBox(height: 20.0),

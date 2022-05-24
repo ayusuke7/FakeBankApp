@@ -1,5 +1,6 @@
 import 'package:fake_bank/core/components/app_container.dart';
-import 'package:fake_bank/ui/nubank/routes/routes_names.dart';
+import 'package:fake_bank/modules/nubank/constants/nu_assets.dart';
+import 'package:fake_bank/modules/nubank/routes/nu_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,7 +23,7 @@ class _NubankLoginPageState extends State<NubankLoginPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Divider(),
-            SvgPicture.asset('assets/icons/nubank/nubanklogo.svg',
+            SvgPicture.asset(NuAssets.logo,
               width: 45,
               height: 45,
             ),

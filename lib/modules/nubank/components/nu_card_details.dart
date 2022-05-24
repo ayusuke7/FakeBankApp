@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CardDetails extends StatelessWidget {
+class NuCardDetails extends StatelessWidget {
 
   final VoidCallback? onTap;
   final EdgeInsets? padding;
   final List<Widget> children;
   final Widget? trailing;
 
-  const CardDetails({ 
+  const NuCardDetails({ 
     Key? key,
     this.onTap,
     this.padding,

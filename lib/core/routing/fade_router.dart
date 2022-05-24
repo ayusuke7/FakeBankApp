@@ -1,22 +1,10 @@
-import 'package:fake_bank/ui/nubank/routes/routes_names.dart';
 import 'package:flutter/material.dart';
 
-Route<dynamic> generateRoute(RouteSettings settings) {
-  Widget child = nubankRoutes[settings.name] ?? Container();
-  
-  PageRoute fadeRouter = _FadeRoute(
-    child: child, 
-    routeName: settings.name!
-  );
-
-  return fadeRouter;
-}
-
-class _FadeRoute extends PageRouteBuilder {
+class FadeRouter extends PageRouteBuilder {
   final Widget child;
   final String routeName;
   
-  _FadeRoute({
+  FadeRouter({
     required this.child, 
     required this.routeName
   }) : super(
